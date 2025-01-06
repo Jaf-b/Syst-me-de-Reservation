@@ -1,15 +1,31 @@
 import { Component } from '@angular/core';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-toobar',
-  imports: [],
+  imports: [MatToolbarModule, MatIconModule],
   template: `
-    <p>
-      toobar works!
-    </p>
+    <mat-toolbar>
+      <div class="max-width container">
+        <span>Kwetu Party</span>
+        <span class="spacer"></span>
+        <div>
+          <span>
+            <mat-icon>notifications</mat-icon>
+          </span>
+        </div>
+      </div>
+    </mat-toolbar>
   `,
-  styles: ``
+  styles: `
+  .container{
+    display:flex;
+    width:100%;
+    justify-content:space-between;
+  }
+    .spacer{
+      flex: 1 1 0;
+    }
+  `,
 })
-export class ToobarComponent {
-
-}
+export class ToobarComponent {}

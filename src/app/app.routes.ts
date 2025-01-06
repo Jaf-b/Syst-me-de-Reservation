@@ -7,7 +7,7 @@ export const routes: Routes = [
     loadComponent: () => import('./ui/not-found/not-found.component'),
   },
   {
-    path: 'home ',
+    path: '',
     title: 'Kwetu Party',
     loadComponent: () => import('./ui/home/home.component'),
   },
